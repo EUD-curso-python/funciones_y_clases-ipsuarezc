@@ -9,7 +9,7 @@ def cambiar_global(i):
     '''
     global global1
     global1 = i
-    print (i)
+    #print (i)
     return global1
     pass
 cambiar_global(6)
@@ -35,7 +35,7 @@ def anio_bisiesto(x):
 
 anio_bisiesto(2020)
 
-def contar_valles():
+def contar_valles(lista):
     '''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
@@ -53,13 +53,22 @@ def contar_valles():
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    pass
-    lista1 = []
-    i = 0
-    for i in lista1: # and lista[i+1] = 1:
+    conteo = 0
+    for i in lista:
+        
+        if  (i == -1):
+            conteo += 1
+            #print(conteo)
         i += 1
-    return lista1 [i]
+        #print(lista[i])
 
+    #print(lista)
+    #print(conteo)
+    return conteo
+    
+    
+pass
+#contar_valles([-1,1])
 contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 
 def saltando_rocas():
@@ -78,7 +87,7 @@ def saltando_rocas():
     '''
     pass
 
-def pares_medias():
+def pares_medias(medias):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -88,8 +97,21 @@ def pares_medias():
     uno de los colores que se encuentren en la lista, y los valores son la 
     cantidad de pares que se han encontrado para cada color.
     '''
-    pass
+    #print(medias)
+    pares = {}
+    for n in medias:
+        #print(n)
+        i = int(medias.count(n)/2)
+        #print(i)
+        if i > 0:
+            pares[n] = i
+    print(pares)
+    return pares
 
+    
+    
+
+pares_medias([2,3,5,6,6,7,3,2,5])
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
 # `lista`. Implementar el método __str__ para que devuelva un string con todos
