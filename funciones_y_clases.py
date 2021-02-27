@@ -15,7 +15,7 @@ def cambiar_global(i):
 cambiar_global(6)
 
 
-def anio_bisiesto():
+def anio_bisiesto(x):
     '''Responder si el entero pasado como argumento es un año bisiesto
     
     Para determinar si un año es bisiesto, se deben tener en cuenta las 
@@ -27,10 +27,16 @@ def anio_bisiesto():
 
     Retorna True o False
     '''
+    if x%4 == 0 or x % 400 == 0:
+        return True
+    else: 
+        return False
     pass
 
+anio_bisiesto(2020)
+
 def contar_valles():
-    r'''Contar el número de valles
+    '''Contar el número de valles
 
     Esta función debe recibir como argumento una lista de -1's, 0's y 1's, y lo 
     que representan son las subidas y las bajadas en una ruta de caminata. -1
@@ -48,6 +54,13 @@ def contar_valles():
     de 3 valles.
     '''
     pass
+    lista1 = []
+    i = 0
+    for i in lista1: # and lista[i+1] = 1:
+        i += 1
+    return lista1 [i]
+
+contar_valles([-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1])
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
